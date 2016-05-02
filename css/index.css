@@ -12,8 +12,12 @@
 	top:0px;
 	background-color:rgba(0,0,0,0);
 	text-align:right;
+	/*width:280px;*/
+	/*height:150px;*/
 }
 .index h1 {
+	/*background-image: url(/common/img/onetapbuy_index.png);*/
+	/*background-color:#FFFFFF;*/
 	margin-bottom:0px;
 	text-align:left;
 }
@@ -48,6 +52,13 @@
 	text-align:center;
 	z-index:10;
 }
+.transaction_banner {
+	margin:25px auto 0 auto;
+	max-width:1050px;
+	min-width:340px;
+	text-align:left;
+	text-indent:20px;
+}
 .messege {
 	width:100%;
 	margin:110px 0 0 20px;
@@ -61,6 +72,9 @@
 }
 @media screen and (min-width: 710px) {
    /* 表示領域が710px以上の場合に適用するスタイル */
+.transaction_banner {
+	margin:15px auto 0 auto;
+}
 .messege {
 	margin:120px 0 0 20px;
 }
@@ -72,6 +86,11 @@
 }
 @media screen and (min-width: 1050px) {
    /* 表示領域が1050px以上の場合に適用するスタイル */
+.transaction_banner {
+	margin:120px auto 0 auto;
+	max-width:1050px;
+	min-width:340px;
+}
 .messege {
 	margin:180px 0 0 20px;
 	font-size:120%;
@@ -82,6 +101,8 @@
 }
 }
 .top_contents {
+	/*max-width:1050px;
+	min-width:340px;*/
 	position:relative;
 	margin:0 auto;
 }
@@ -90,6 +111,53 @@
 	line-height:180%;
 }
 
+.index navi {
+	float:left;
+	font-weight:900;
+	padding:10px 10px 10px 0;
+}   
+@media screen and (min-width: 500px) {
+   /* 表示領域が500px以上の場合に適用するスタイル */
+.index navi {
+	position:absolute;
+	top:18px;
+	right:30px;
+	clear:left;
+}
+}
+.index navi ul {
+	list-style:none;
+}
+
+.index navi ul li {
+	float:left;
+	background-color:rgba(0,0,0,0.6);
+	line-height:24px;
+	margin-left:5px;
+	border:solid 1px #CCCCCC;
+	text-align:center;
+}
+@media screen and (min-width: 710px) {
+   /* 表示領域が710px以上の場合に適用するスタイル */
+.index navi ul li {
+}
+}
+.index navi ul li a {
+	display:block;
+	color:#FFFFFF;
+	text-decoration:none;
+	width:100%;
+	height:100%;
+}
+.index navi ul li a:hover {
+	display:block;
+	color:#FFFFFF;
+	background-color:rgba(255,255,255,0.5);
+	text-decoration:none;
+	width:100%;
+	height:100%;
+	text-shadow:0px 0px 5px #000000;
+}
 .top_ref {
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
@@ -112,20 +180,20 @@
 	 line-height:135%;
 	 padding:0 0 8px 0;
 }
-.top_ref div {
-	/*margin:10px 20px;*/
+/*.top_ref div {
+	margin:10px 20px;
 	margin:0 auto;
-	/*text-align:left;*/
+	text-align:left;
 	text-align:center;
 	width:100%;
-}
+}*/
 .top_ref ul {
 	margin:10px 50px;
 	list-style:none;
 	text-align:left;
 }
 .top_ref ul li {
-	background-image:url(/img/arrow_circle.png);
+	background-image:url(../img/arrow_circle.png);
 	background-size: 20px 20px, auto !important;
 	-webkit-background-size: 20px 20px, auto !important;
 	-moz-background-size: 20px 20px, auto !important;
@@ -147,7 +215,7 @@
 	height:100%;
 }
 .top_ref ul li a:hover {
-	background-image:url(/img/arrow_circle.png);
+	background-image:url(../img/arrow_circle.png);
 	background-size: 20px 20px, auto !important;
 	-webkit-background-size: 20px 20px, auto !important;
 	-moz-background-size: 20px 20px, auto !important;
@@ -273,6 +341,34 @@
 	top:0px;
 	left:0px;
 }
+.index_brand_icon {
+	width:50px;
+	height:50px;
+	border-radius:5px;
+	border:solid 2px;
+	padding:2px;
+	float:left;
+	margin:10px;
+	font-weight:900;
+	position:relative;
+	box-shadow:#333333 2px 2px 4px;
+}
+.index_brand_icon a {
+	color:#333333;
+	text-decoration:none;
+}
+.stay {
+	border-color:#EEEEEE;
+	background-color:#FFFFFF;
+}
+.up {
+	border-color:#FFCCCC;
+	background-color:#FFFFFF;
+}
+.down {
+	border-color:#CCCCFF;
+	background-color:#FFFFFF;
+}
 .main_logo {
 	text-align:center;
 	width:70%;
@@ -286,19 +382,49 @@
 	margin:0 auto;
 }
 }
-
+.iv_word {
+	padding:0;
+}
+.iv_card {
+	line-height:0px;
+	width:35%;
+	margin:0 0 0 20%;
+}
+@media screen and (min-width: 480px) {
+/* 表示領域が480px以上の場合に適用するスタイル */
+.iv_word {
+	float:left;
+}
+.iv_card {
+	float:left;
+	margin:0px;
+}
+}
+@media screen and (min-width: 840px) {
+/* 表示領域が840px以上の場合に適用するスタイル */
+.iv_word {
+	padding:50px 0 0 15%;
+}
+.iv_card {
+	line-height:0px;
+	width:35%;
+	max-width:200px;
+	margin:-20px 0 0 10px;
+}
+}
 .roteto {
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-ms-box-sizing:border-box;
 	-o-box-sizing:border-box;
-	width:90%;
-	padding:5px;
+	width:100%;
+	padding:2%;
 	float:left;
 }
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 640px) {
 .roteto {
 	width:45%;
+	margin:0 0 0 2%;
 }
 }
 	
@@ -325,3 +451,28 @@
 	clear:both;
 }
 /*トップYouTube表示用*/
+
+/*障害発生時アラートレイヤー*/
+#warning {
+	position:absolute;
+	top:50px;
+	left:10px;
+	background-color:rgba(0,0,0,0.5);
+	/*border:solid 2px;
+	border-color:rgba(0,0,0,0.5);*/
+	padding:3px 10px;
+	border-radius:5px;
+	color:#FFFFFF;
+	font-weight:900;
+}
+#warning a {
+	color:#FFFFFF;
+	text-decoration:none;
+	text-shadow:0px 0px 4px #000000;
+}
+@media screen and (max-width: 840px) {
+#warning {
+	top:10px;
+	left:10px;
+}
+/*障害発生時アラートレイヤー*/

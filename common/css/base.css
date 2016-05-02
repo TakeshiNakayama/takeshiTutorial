@@ -24,15 +24,25 @@ header h1 {
 	background-size: 200px 50px, auto !important;
 	-webkit-background-size: 200px 50px, auto !important;
 	-moz-background-size: 200px 50px, auto !important;
-	-ms-background-size: 200px 50px, auto !important;
 	-o-background-size: 200px 50px, auto !important;
+	-ms-background-size: 200px 50px, auto !important;
+	background-size: 200px 50px, auto !important;
 	background-repeat: no-repeat;
 	background-position: center center;
 	width:240px;
 	height:70px;
 	float:left;
-	margin-bottom:0px;
+	margin:0 0 0 0;
 	text-indent:-9999px;
+}
+@media screen and (min-width: 800px) {
+/*header {
+	position:absolute;
+	right:0px;
+}*/
+header h1 {
+	margin:40px 0 0 0;
+}
 }
 header h1 a {
 	display:block;
@@ -40,7 +50,6 @@ header h1 a {
 	height:100%;
 }
 navi {
-	display:none;/*アプリ提供時表示*/
 	float:right;
 	padding:28px 10px 10px 0;
 }
@@ -83,44 +92,9 @@ footer {
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:900;
 }
-.wrap {
-	max-width:1200px;
-	min-width:320px;
-	margin-left:auto;
-	margin-right:auto;
-	background-color:#FFFFFF;
-	clear:both;
-}
-.clear {
-	clear:both;
-}
-.arrow {
-	border: solid 5px rgba(0,0,0,0);
-	border-left: solid 5px rgba(102,153,51,1);
-	width:0px;
-	float:left;
-	margin-top:11px;
-}
+@media screen and (max-width: 799px) {
 .foot_navi {
 	background-color:#999999;
-}
-@media screen and (min-width: 710px) {
-   /* 表示領域が700px以上の場合に適用するスタイル */
-.arrow {
-	margin-top:4px;
-}
-}
-.arrow_h2 {
-	border:solid 10px rgba(0,0,0,0);
-	border-left:solid 20px rgba(0,0,0,0.3);
-	width:0px;
-	float:left;
-	margin-left:10px;
-	margin-right:-10px;
-	margin-top:10px;
-}
-
-.foot_navi {
 	color:#FFFFFF;
 	font-size:120%;
 	padding:5px;
@@ -144,45 +118,191 @@ footer {
 	text-decoration:none;
 }
 .foot_navi ul li a:hover {
-	color:#56941F;
+	color:#666666;
 	background-color:#FFFFFF;
 	display:block;
 	text-decoration:none;
 }
-@media screen and (min-width: 710px) {
-   /* 表示領域が340px以上の場合に適用するスタイル */
+.banner {
+	text-align:right;
+	padding:5px 10px 0 0;
+}
+.banner img {
+	margin:0 5px;
+	float:right;
+}
+}
+/*.head_menu {
+	display:none;
+}*/
+@media screen and (min-width: 800px) {
 .foot_navi {
-	background-color:#999999;
-	font-size:110%;
-	font-weight:100;
+	display:block;
+	height:44px;
+	background-color:rgba(0,0,0,0.5);
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	color:#FFFFFF;
 }
 .foot_navi ul {
-	float:left;
+	max-width:1200px;
+	margin:10px auto;
+	list-style:none;
 }
 .foot_navi ul li {
-	line-height:50px;
-	margin:0 8px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	width:14.2%;
 	float:left;
+	color:#FFFFFF;
+	line-height:24px;
+	vertical-align:middle;
+	text-align:center;
 }
 .foot_navi ul li a {
-	background-color:#999999;
+	text-decoration:none;
+	display:block;
+	width:100%;
+	height:100%;
+	color:#FFFFFF;
 }
+.foot_navi ul li a:hover {
+	background-color:rgba(255,255,255,0.3);
+	border-radius:5px;
+	color:#FFFFFF;
+	text-shadow:1px 1px 3px #000000;
+}
+.banner {
+	position:absolute;
+	top:-13px;
+	right:10px;
+	text-align:right;
+	padding:5px 10px 0 0;
+}
+.banner img {
+	margin:0 5px;
+	float:right;
+}
+/*.foot_navi {
+	display:none;
+}
+/*
+.head_menu {
+	display:block;
+	background-color:rgba(0,0,0,0.5);
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	color:#FFFFFF;
+}
+.head_menu ul {
+	max-width:1200px;
+	margin:10px auto;
+	list-style:none;
+}
+.head_menu ul li {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	width:14.2%;
+	float:left;
+	color:#FFFFFF;
+	line-height:24px;
+	vertical-align:middle;
+	text-align:center;
+}
+.head_menu ul li a {
+	text-decoration:none;
+	display:block;
+	width:100%;
+	height:100%;
+	color:#FFFFFF;
+}
+.head_menu ul li a:hover {
+	background-color:rgba(255,255,255,0.3);
+	border-radius:5px;
+	color:#FFFFFF;
+	text-shadow:1px 1px 3px #000000;
+}
+.foot_navi {
+	display:none;
+}*/
+}
+/*グランドオープン時削除 AppStoreGooglePlayバナー*/
+.banner {
+	display:none;
+}
+/*グランドオープン時削除 AppStoreGooglePlayバナー*/
+.wrap {
+	max-width:1200px;
+	min-width:320px;
+	margin-left:auto;
+	margin-right:auto;
+	clear:both;
+}
+.limitter {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	max-width:1200px;
+	margin:0 auto;
+	position:relative;
+}
+.clear {
+	clear:both;
+	vertical-align:middle;
+}
+.arrow {
+	border: solid 5px rgba(0,0,0,0);
+	border-left: solid 5px rgba(102,153,51,1);
+	width:0px;
+	float:left;
+	margin-top:11px;
 }
 
+@media screen and (min-width: 710px) {
+   /* 表示領域が700px以上の場合に適用するスタイル */
+.arrow {
+	margin-top:4px;
+}
+}
+.arrow_h2 {
+	border:solid 10px rgba(0,0,0,0);
+	border-left:solid 20px rgba(0,0,0,0.3);
+	width:0px;
+	float:left;
+	margin-left:10px;
+	margin-right:-10px;
+	margin-top:10px;
+}
 .foot_list {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
 	background-color:#FFFFFF;
 	color:#666666;
-	max-width:1180px;
-	min-width:340px;
+	/*min-width:340px;*/
 	padding:10px;
 	margin:0 auto;
 	font-size:125%;
 }
-.foot_list .title {
+.foot_list h3 {
 	color:#333333;
 	font-size:115%;
-	margin-bottom:5px;
-	height:40px;
+	text-indent:0px;
+	text-align:center;
+	clear:both;
+	padding:25px 0 5px 0;
+	margin:0 0 0 0;
+	border-bottom:solid 2px #EEEEEE;
 }
 .foot_list ul {
 	-webkit-box-sizing:border-box;
@@ -194,6 +314,10 @@ footer {
 	width:100%;
 }
 .foot_list ul li {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
 	line-height:30px;
 	vertical-align:middle;
 	text-align:center;
@@ -218,9 +342,12 @@ footer {
 	padding:40px 10px 10px 10px;
 	font-size:100%;
 }
-.foot_list .title {
+.foot_list h3 {
 	line-height:18px;
-	margin-bottom:5px;
+	padding:0 0 0 0;
+	margin:0 0 5px 0;
+	text-align:left;
+	text-indent:-5px;
 }
 .foot_list ul {
 	-webkit-box-sizing:border-box;
@@ -229,8 +356,12 @@ footer {
 	-o-box-sizing:border-box;
 	list-style:none;
 	float:left;
-	padding:0 22px 30px 22px;
-	width:25%;/*アプリ提供時に20%に変更*/
+	padding:0 22px 0px 22px;
+	width:20%;
+	border-left:solid 1px #CCCCCC;
+}
+.foot_list ul:last-child {
+	border-right:solid 1px #CCCCCC;
 }
 .foot_list ul li {
 	margin-bottom:2px;
@@ -246,6 +377,9 @@ footer {
 	background-color:#EEEEEE;
 	padding:5px;
 	text-align:center;
+}
+.foot_caution a {
+	text-decoration:none;
 }
 /*入力フォーム*/
 .input_area {
@@ -332,6 +466,11 @@ footer {
 }
 
 .contents {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	background-color:#63B11F;
 	font-size:110%;
 	line-height:150%;
 	padding:10px;
@@ -347,38 +486,41 @@ footer {
 }
 }
 .position {
-	color:#FFFFFF;
+	color:#999999;
 	padding:5px 0;
 }
 .position a {
-	color:#FFFFFF;
+	color:#CCCCCC;
 	text-decoration:none;
 }
 .position a:hover {
 	text-decoration:underline;
 }
 .position a:visited {
-	color:#FFFFFF;
+	color:#CCCCCC;
 }
 .lead {
+	font-size:110%;
+	font-weight:400;
+	line-height:180%;
 	padding-bottom:20px;
 }
 .contents h2 {
 	font-size:250%;
-	color:#FFFFFF;
+	color:#999999;
 	line-height:40px;
 	vertical-align:middle;
 	margin-bottom:15px;
 }
 .contents h3 {
 	border-bottom:solid 3px #63B11F;
+	line-height:130%;
 	font-size:150%;
 	font-weight:900;
-	line-height:130%;
 	clear:both;
 	margin-top:25px;
 	margin-bottom:10px;
-	padding:0 0 8px 0;
+	padding:0 0 4px 0;
 }
 h3:first-child {
 	margin-top:0;
@@ -473,6 +615,14 @@ h3:first-child {
 	color:#666666;
 	padding:15px;
 }
+.contents_right h3 {
+	background-color:#EEEEEE;
+	border-bottom:solid 1px #CCCCCC;
+	font-size:115%;
+	color:#666666;
+	padding:15px;
+	margin:0 0 0 0;
+}
 .contents_right ul {
 	list-style:none;
 	font-size:115%;
@@ -500,24 +650,32 @@ h3:first-child {
 }
 
 .sec_img {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
 	width:100%;
 	float:left;
 	position:relative;
-	margin:0 10px 10px 0;
 }
 .ref_img {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
 	width:100%;
 	float:right;
-	margin:10px 0 10px 10px;
 }
 
 @media screen and (min-width: 640px) {
    /* 表示領域が640px以上の場合に適用するスタイル */
 .sec_img {
 	width:45%;
+	margin:0 10px 10px 0;
 }
 .ref_img {
 	width:45%;
+	margin:0 10px 10px 0;
 }
 }
 
@@ -547,10 +705,14 @@ h3:first-child {
 }
 
 .contents_left {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
 	float:left;
 	box-sizing: border-box;
 	width:100%;
-	padding:10px;
+	/*padding:10px;*/
 }
 .contents_right {
 	visibility:hidden;
@@ -601,16 +763,6 @@ h3:first-child {
 .right {
 	float:right;
 }
-.banner {
-	display:none;/*アプリ提供時表示させる*/
-	text-align:right;
-	padding-top:20px;
-}
-.banner img {
-	margin:0 5px;
-	float:right;
-}
-
 /*共通ボタン*/
 .btn_shape {
 	color:#333333;
@@ -805,9 +957,12 @@ h3:first-child {
 /*口座開設ページ*/
 .talking_area {
 	background-image: url(/img/concierge1.png);
-	background-size: 100px 141px, auto !important;
-	-webkit-background-size: 100px 141px, auto !important;
 	background-repeat: no-repeat;
+	-webkit-background-size: 100px 141px, auto !important;
+	-moz-background-size: 100px 141px, auto !important;
+	-o-background-size: 100px 141px, auto !important;
+	-ms-background-size: 100px 141px, auto !important;
+	background-size: 100px 141px, auto !important;
 	background-position:top right;
 	min-height:100px;
 	clear:both;
@@ -837,16 +992,37 @@ h3:first-child {
 	font-weight:900;
 	text-align:left;
 }
-.talking_kids {
-	background-size: 270px 140px, auto !important;
-	-webkit-background-size: 270px 140px, auto !important;
+
+/*入金ページ*/
+.fukidashi {
+}
+.please_area {
+	background-size: 100px 141px, auto !important;
+	-webkit-background-size: 100px 141px, auto !important;
 	background-repeat: no-repeat;
 	background-position:top right;
-	min-height:140px;
-	clear:both;
-	padding:10px 200px 10px 0;
+	min-height:100px;
+	padding:0px 100px 10px 10px;
+	max-width:320px;
+	float:left;
 }
-.talking_kids div {
+.please_area div {
+	border:solid 3px #CCCCCC;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	padding:5px;
+	color:#996666;
+	font-weight:900;
+	text-align:left;
+	margin:0 0 10px 0;
+}
+.please_area table {
+	border:none 0px #FFFFFF;
+}
+.please_area table td {
+	border:none 0px #FFFFFF;
+}
+.please_area .fukidashi table {
 	border:solid 3px #CCCCCC;
 	background-color:#FFFFFF;
 	border-radius:10px;
@@ -855,21 +1031,35 @@ h3:first-child {
 	font-weight:900;
 	text-align:left;
 }
-.talking_kids table {
-	border:none 0px #FFFFFF;
-}
-.talking_kids table td {
-	border:none 0px #FFFFFF;
-}
-.talking_kids .fukidashi table {
-	border:solid 3px #CCCCCC;
-	background-color:#FFFFFF;
+.account_table {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	width:100%;
+	max-width:320px;
+	float:left;
+	border-left:solid 1px #CCCCCC;
+	border-top:solid 1px #CCCCCC;
+	padding:0px;
+	margin:0 0 10px 0;
+	font-size:125%;
 	border-radius:10px;
-	padding:5px;
-	color:#996666;
-	font-weight:900;
-	text-align:left;
+	box-shadow:#CCCCCC 1px 1px 3px;
 }
+.account_table th {
+	padding:3px;
+	text-align:center;
+	border-bottom:solid 1px #CCCCCC;
+	border-right:solid 1px #CCCCCC;
+}
+.account_table td {
+	padding:3px;
+	text-align:center;
+	border-bottom:solid 1px #CCCCCC;
+	border-right:solid 1px #CCCCCC;
+}
+/*入金ページ*/
 
 /*カメラ起動ボタン*/
 .file {
@@ -977,11 +1167,21 @@ h3:first-child {
 	padding:10px;
 }
 .b_table {
-	margin:10px 0;
 	border-top:solid 1px #999999;
 	border-left:solid 1px #999999;
-	font-weight:900;
+	/*font-weight:900;*/
 	color:#444444;
+}
+@media screen and (min-width: 800px) {
+.b_table {
+	margin:10px 0;
+}
+}
+.b_table th {
+	border-right:solid 1px #999999;
+	border-bottom:solid 1px #999999;
+	text-align:center;
+	padding:3px;
 }
 .b_table td {
 	padding:3px;
@@ -1009,7 +1209,6 @@ h3:first-child {
 	float:left;
 }
 .company_about dd {
-	/*width:65%;*/
 	padding:10px 0;
 	text-align:left;
 	float:left;
@@ -1077,10 +1276,10 @@ h3:first-child {
 	border-bottom:#666666 1px solid;
 }
 #memu_format ul li {
-	webkit-box-sizing:border-box;
-	moz-box-sizing:border-box;
-	ms-box-sizing:border-box;
-	o-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
 	margin:10px 0;
 	vertical-align:middle;
 }
@@ -1159,6 +1358,241 @@ h3:first-child {
 }
 /*お知らせページ*/
 
+.pc_view {
+	display:none;
+}
+.sp_view {
+	display:block;
+	margin:10px 0 10px 0;
+}
+@media screen and (min-width: 640px) {
+.pc_view {
+	display:block;
+}
+.sp_view {
+	display:none;
+}
+}
+.mas_cell {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	width:130px;
+	padding:12px;
+	margin:10px 0;
+	border:solid 1px #64B120;
+	float:left;
+	text-align:center;
+	/*height:50px;*/
+	background-color:#F7FCF5;
+	color:#64B120;
+	font-weight:900;
+	line-height:1.4em;
+	display:block;
+}
+.mas_sign {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	padding:0 5px;
+	margin:10px 0;
+	float:left;
+	text-align:center;
+	font-weight:900;
+	line-height:62px;
+	vertical-align:middle;
+}
+/*入出金ページのカスタムCSS*/
+#protection {
+	position:relative;
+	line-height:0px;
+	width:100%;
+	max-width:622px;
+	margin:15px auto;
+	text-align:center;
+}
+.float_img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+#selector {
+	clear:both;
+	margin:10px 0;
+}
+#selector ul {
+	list-style:none;
+	margin:0 0 0 0;
+}
+#selector ul li {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	width:33%;
+	text-align:center;
+	float:left;
+	border:solid 1px #CCCCCC;
+}
+#selector ul li a {
+	background-color:#EEEEEE;
+	color:#333333;
+	display:block;
+	text-decoration:none;
+	width:100%;
+	height:100%;
+	padding:5px 0;
+}
+/*入出金ページのカスタムCSS*/
+
+/*トップYouTube表示用*/
+.move_stage {
+	display:none;
+	z-index:99;
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	padding:10px 0 0 0;
+	background-color:rgba(0,0,0,0.8);
+	text-align:right;
+}
+.move_stage a {
+	font-size:150%;
+	font-weight:900;
+	color:#FFFFFF;
+	text-decoration:none;
+	padding:10px;
+	margin:10px 10px;
+	clear:both;
+}
+/*トップYouTube表示用*/
+
+/*使い方ページ*/
+#howto1,#howto2,#howto3,#howto4,#howto5,#howto6,#howto7 {
+	display:none;
+	z-index:99;
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	padding:10px 0 0 0;
+	background-color:rgba(0,0,0,0.8);
+}
+.ht_contents {
+	width:320px;
+	height:700px;
+	position:relative;
+	margin:0 auto;
+	overflow:hidden;
+	font-size:120%;
+	line-height:150%;
+	color:#FFFFFF;
+}
+.ht_contents h3 {
+	padding:5px;
+	background-color:#999999;
+	color:#FFFFFF;
+	font-weight:900;
+	font-size:125%;	
+	text-indent:10px;
+}
+.ht_contents h3 a {
+	text-decoration:none;
+	color:#FFFFFF;
+}
+.ht_contents h4 {
+	padding:3px;
+	background-color:#CCCCCC;
+	color:#333333;
+	font-weight:500;
+	text-indent:12px;
+	margin:0 0 10px 0;
+}
+.how_to {
+	position:relative;
+	height:680px;
+}
+.sec_tub {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	margin:0 0 10px 0;
+	padding:0 10px 0 0;
+	clear:both;
+	float:left;
+	width:300px;
+}
+.sec_tub ul {
+	margin:0 0 0 0;
+	border-bottom:solid 1px #CCCCCC;
+}
+.sec_tub li {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	background-position: right center;
+	background-repeat: no-repeat;padding:5px 5px 5px 3px;
+	margin:0px 1px 0px 1px;
+	list-style:none;
+	text-indent:10px;
+	border:solid #CCCCCC;
+	border-width:1px 0 0 0;
+	display:block;
+	background-image:url(/img/arrow_circle.png);
+	-webkit-background-size: 20px 20px, auto !important;
+	-moz-background-size: 20px 20px, auto !important;
+	-o-background-size: 20px 20px, auto !important;	
+	-ms-background-size: 20px 20px, auto !important;
+	background-size: 20px 20px, auto !important;
+}
+.sec_tub li a {
+	font-weight:400;
+	font-size:120%;
+	text-decoration:none;
+	color:#666666;
+	display:block;
+}
+@media screen and (max-width: 640px) {
+.sec_tub {
+	width:100%;
+}
+sec_img {
+	width:100%
+}
+}
+.next_btn {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	width:70px;
+	text-align:center;
+	float:right;
+	border:solid 1px #999999;
+	background-color:#FFFFFF;
+	font-size:18px;
+	padding:2px;
+	margin:10px 10px 10px 10px;
+	border-radius:5px;
+}
+.next_btn a {
+	text-decoration:none;
+	display:block;
+	color:#333333;
+}
+.how_to .next_btn {
+	font-size:85%;
+}
+/*使い方ページ*/
+
 /*アプリ用会社案内・ディスクロージャーページ用*/
 .switch {
 	clear:both;
@@ -1200,3 +1634,14 @@ btn_right {
 	 border-radius:0 5px 5px 0;
 }
 /*アプリ用会社案内・ディスクロージャーページ用*/
+
+/*特許
+.patent {
+	padding:3px 4px 0 8px;
+	border:solid 1px #CCCCCC;
+	border-radius:3px;
+	background-color:#FFFFF5;
+	color:#FF0000;
+	float:left;
+}
+/*特許*/
